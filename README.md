@@ -27,6 +27,24 @@ The Ridon - BIMI Vehicle is a ROS workspace for a Drive-By-Wire system for a sca
 
 The `bimi_vehicle` runs with ROS Melodic on Ubuntu 18.04 LTS.
 
+# Data Collection 
+
+The image data locations for the collected images can be configured at 
+`src/data_acquisition/config/parameters.yaml`.
+
+```
+$ roslaunch bimi_vehicle data_acquisition.launch
+```
+
+# Training a Neural Network
+
+```
+$ cd /path/to/ridon/train
+$ python train.py /path/to/data/folder <network_model_name>
+```
+
+`<network_model_name>` will be used to create a trained network model. 
+
 # Running the trained model
 
 To launch the vehicle model in Gazebo
