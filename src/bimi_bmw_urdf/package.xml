@@ -1,0 +1,12 @@
+<package format="2">
+  <name>bimi_bmw_urdf</name>
+  <version>0.0.1</version>
+  <description>
+  Provides a URDF for a bimi_bmw
+  </description>
+  <maintainer email="bimi-lab@todo.todo">bimi-lab</maintainer>
+  <license>APACHE 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>urdf</depend>
+</package>

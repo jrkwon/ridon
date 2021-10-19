@@ -1,0 +1,8 @@
+#lidar_port 
+port: "/dev/ttyACM1"
+#USB camera port selection
+video_device : "/dev/video0"
+#camera and lidar saved images directory
+Cam_lidar_images_directory : "/home/bimi/robotics/av/jaerock/ridon/data/"
+#stacked images saved images directory
+stacked_images_directory : "/home/bimi/robotics/av/jaerock/ridon/data/"

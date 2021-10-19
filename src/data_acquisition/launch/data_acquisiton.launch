@@ -1,0 +1,31 @@
+<launch>
+  <!-- LIDAR node -->
+  <node pkg="xv_11_laser_driver" name="neato_laser_publisher" type="neato_laser_publisher">
+    <rosparam command="load" file="$(find data_acquisition)/config/parameters.yaml" />
+  </node>
+
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <rosparam command="load" file="$(find data_acquisition)/config/parameters.yaml" />
+    <param name="image_width" value="320" />
+    <param name="image_height" value="240" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <!--Camera and lidar images acquistion-->
+  <node pkg="data_acquisition" type="cam_lidar_acquistion.py" name="cam_lidar_acquistion" output="screen">
+    <rosparam command="load" file="$(find data_acquisition)/config/parameters.yaml" />
+  </node>
+
+  <!--LIDAR to image converter-->
+  <node pkg="data_acquisition" type="lidar_to_image.py" name="lidar_to_image">
+
+  </node>
+
+  <!--Stacked image acquistion-->
+  <node pkg="data_acquisition" type="stacked_image_acquistion.py" name="stacked_image_acquistion" output="screen">
+    <rosparam command="load" file="$(find data_acquisition)/config/parameters.yaml" />
+  </node>
+
+</launch>
