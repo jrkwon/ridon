@@ -1,6 +1,6 @@
-# Ridon Vehicle
+# Ridon - BIMI Vehicle
 
-The Ridon Vehicle is a ROS workspace for a Drive-By-Wire system for a scaled vehicle.
+The Ridon - BIMI Vehicle is a ROS workspace for a Drive-By-Wire system for a scaled vehicle.
 
 # Contributors
 - Jaerock Kwon, Ph.D., Assistant Professor at University of Michigan-Dearborn
